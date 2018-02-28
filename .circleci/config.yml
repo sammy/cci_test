@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/workspace
+
+    docker:
+      - image: circleci/ruby:2.5.0-stretch-node-browsers
+
+    steps:
+      - checkout
+
+      - run:
+          name: setup-local-packages
+          command: |
+            echo $VAR1
+
+      - run:
+          name: run-maf-app-image
+          command: |
+            echo "Ending build" 
