@@ -11,8 +11,7 @@ jobs:
 
       - run:
           name: setup-local-packages
-          command: |
-            echo $VAR1
+          command: ./script.sh
 
       - run:
           name: run-maf-app-image
